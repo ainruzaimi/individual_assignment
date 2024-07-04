@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ain ruzaimi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="home" class="logo">Ain 
+            <span>Ruzaimi</span></a>
+
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html"class="active">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+    </header>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/image.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>Hi and hello everyone! My name is Ain, I'm studying at UiTM Kota Bharu. This year is my second year in this university. It feels like just yesterday  1 was stepping onto campus, full of excitement and anticipation for the new chapter of my life. Yet, here I am, already marveling at how swiftly the semesters have passed.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Travel')">Travel</p>
+                        <p class="tab-links"onclick="opentab('Food')">Food</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Travel">
+                        <ul>
+                            <li><span>Dabong</span><br>Kelantan</li>
+                            <li><span>Cameron Highland</span><br>Pahang</li>
+                            <li><span>Bandar Hilir</span><br>Melaka</li>
+                        </ul>
+                    </div>
+                    
+
+                    <div class="tab-contents" id="Food">
+                        <ul>
+                            <li><span>Pavlova</span><br>Ngofee Cafe</li>
+                            <li><span>Tomyam</span><br>Siam</li>
+                            <li><span>Steamboat</span><br>Makito</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+
+
+    </script>
+</body>
+</html>
